@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TicketFinder</string>
+    <string name="air_tickets">Авивбилеты</string>
+    <string name="hotels">Отели</string>
+    <string name="in_short">Короче</string>
+    <string name="subscriptions">Подписки</string>
+    <string name="profile">Профиль</string>
+</resources>

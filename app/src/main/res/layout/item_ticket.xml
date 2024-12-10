@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="328dp"
+    android:layout_height="117dp"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/bg_straight_rails"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/badgeTextView"
+        android:layout_width="126dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingStart="10dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="10sp"
+        android:paddingBottom="2dp"
+        android:text="Прилет вечером"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="8 566 ₽"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/circle_imageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/bg_image"
+        android:src="@drawable/ic_red_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_textView" />
+
+    <TextView
+        android:id="@+id/departure_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_display_light_italic"
+        android:text="17:45"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/circle_imageView"
+        app:layout_constraintTop_toBottomOf="@id/price_textView" />
+
+    <TextView
+        android:id="@+id/departure_airport_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="DME"
+        android:textColor="#9F9F9F"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/circle_imageView"
+        app:layout_constraintTop_toBottomOf="@id/departure_time_textView" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="25dp"
+        android:background="#9F9F9F"
+        app:layout_constraintStart_toEndOf="@id/departure_time_textView"
+        app:layout_constraintTop_toBottomOf="@id/price_textView" />
+
+    <TextView
+        android:id="@+id/arrival_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_display_light_italic"
+        android:text="21:20"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/price_textView" />
+
+    <TextView
+        android:id="@+id/arrival_airport_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="AER"
+        android:textColor="#9F9F9F"
+        app:layout_constraintStart_toEndOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/arrival_time_textView" />
+
+    <TextView
+        android:id="@+id/flight_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="3.5ч в пути"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/arrival_time_textView"
+        app:layout_constraintTop_toBottomOf="@id/price_textView" />
+
+    <LinearLayout
+        android:id="@+id/has_transfer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/flight_time_textView"
+        app:layout_constraintTop_toBottomOf="@id/price_textView">
+
+        <TextView
+            android:id="@+id/slash_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" \\ "
+            android:textColor="#9F9F9F"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/has_transfer_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="Без пересадок"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

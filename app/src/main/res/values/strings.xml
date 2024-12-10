@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TicketFinder</string>
+    <string name="air_tickets">Air tickets</string>
+    <string name="hotels">Hotels</string>
+    <string name="in_short">Shortly</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="profile">Profile</string>
+
+</resources>

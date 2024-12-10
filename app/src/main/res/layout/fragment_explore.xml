@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0C0C">
+
+    <TextView
+        android:id="@+id/search_ticket_textView"
+        android:layout_width="172dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="25dp"
+        android:lineHeight="26dp"
+        android:text="Поиск дешевых авиабилетов"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_ticket"
+        android:layout_width="328dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/bg_search_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_ticket_textView">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="296dp"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="#3E3F43"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/search_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="33dp"
+                android:src="@drawable/ic_loup" />
+
+            <LinearLayout
+                android:id="@+id/start_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_from_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Откуда-Москва"
+                    android:background="@null"
+                    android:hint="Откуда-Москва"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="#9F9F9F"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="232dp"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="#9F9F9F9F" />
+
+                <EditText
+                    android:id="@+id/et_to_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Куда-Турция"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:hint="Куда-Турция"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="#9F9F9F"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/musical_departure_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Музыкально отлететь"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_ticket" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/musical_departure_textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

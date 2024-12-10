@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0C0C">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/current_route_layout"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="#242529"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/current_route_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="Москва-Сочи"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/back_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/current_route_info_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="23 февраля, 1 пассажир"
+            android:textColor="#9F9F9F"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/back_imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_tickets_recyclerView"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_route_layout" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/filter_ActionButton"
+            style="@style/CustomFABStyleLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:minHeight="37dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="Фильтры"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:backgroundTint="#2261BC"
+            app:icon="@drawable/ic_filter2"
+            app:iconSize="16dp"
+            app:iconTint="@color/white" />
+
+        <!-- Правая кнопка -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/chart_ActionButton"
+            style="@style/CustomFABStyleRight"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:fontFamily="@font/sf_pro_display_light_italic"
+            android:minHeight="37dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="График цен"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:backgroundTint="#2261BC"
+            app:icon="@drawable/ic_chart"
+            app:iconSize="16dp"
+            app:iconTint="@color/white" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
