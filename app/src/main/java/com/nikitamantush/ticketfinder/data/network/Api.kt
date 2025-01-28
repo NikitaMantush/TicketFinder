@@ -8,12 +8,12 @@ import retrofit2.http.GET
 
 interface Api {
 
-    @GET("068685c7-c74e-4b85-abed-5249862334ea")
+    @GET("94dfb7bd-3962-409f-9cca-796fd7f40189")
     suspend fun getOfferList(): Response<OfferResponse>
 
-    @GET("6fc141a6-fe22-4026-829a-540332e24618")
+    @GET("4000298b-2834-4cee-b863-90c17f6e65d8")
     suspend fun getTicketOfferList(): Response<TicketOfferResponse>
 
-    @GET("7c8d45ff-1635-41e4-a243-37a6120e429f")
+    @GET("eb2a5015-6580-4ce8-8642-c4ca7b593a56")
     suspend fun getTicketList(): Response<TicketResponse>
 }
